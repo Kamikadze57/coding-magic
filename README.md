@@ -1,1 +1,1 @@
-# coding-magic
+# parcel-project-template
