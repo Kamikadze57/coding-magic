@@ -1,0 +1,17 @@
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator__title {
+  margin-bottom: 36px;
+}
+.calculator__input {
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  width: 135px;
+  height: 35px;
+  margin-right: 38px;
+  margin-left: 10px;
+}
