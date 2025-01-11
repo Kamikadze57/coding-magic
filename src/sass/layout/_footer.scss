@@ -3,24 +3,15 @@
   gap: 186px;
   padding-top: 60px;
   padding-bottom: 60px;
-  justify-content: center;
   align-items: center;
-}
-.footer__logo-icon {
-  fill: #000000;
 }
 .footer__item {
   display: flex;
   flex-direction: row;
-  text-decoration: none;
-  font-weight: 400;
   font-size: 12px;
-  color: #000;
-  gap: 5px;
   padding-bottom: 5px;
 }
 .footer-address__link {
-  text-decoration: none;
   color: #000;
 }
 .footer__input {
@@ -46,13 +37,11 @@
   color: #ffffff;
   background-color: #000000;
   font-size: 12px;
-  font-weight: 400;
-  text-decoration: none;
+  border: none;
   border-radius: 20px;
-  padding: 10px;
   width: 107px;
-  height: 35px;
   transition: 250ms ease-in-out;
+  border: #000 1px solid;
   &:active,
   &:hover {
     background-color: #d7d7d7;
@@ -60,9 +49,6 @@
   }
 }
 .footer-input__subtitle {
-  text-decoration: none;
-  font-weight: 400;
   font-size: 6px;
-  color: #000;
   padding-top: 18px;
 }
