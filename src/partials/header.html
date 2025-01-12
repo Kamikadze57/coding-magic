@@ -4,21 +4,21 @@
       <li class="header__item--icon">
         <a class="logo__link link" href="#">
           <svg class="header__logo-icon" width="92" height="38">
-            <use href="./images/icons.svg#logo"></use>
+            <use href="/src/images/icons.svg#logo"></use>
           </svg>
         </a>
       </li>
-      <li class="header__item">
-        <button class="header__btn">
+      <li class="header__item dropdown">
+        <button onclick="myFunction()" class="header__btn dropbtn">
           Інтерактив
-          <svg class="interaktive__icon" width="21" height="17">
-            <use href="./images/icons.svg#icon-arrow"></use>
+          <svg class="header__dropdown-icon" width="15" height="19">
+            <use href="/src/images/icons.svg#icon-arrow"></use>
           </svg>
         </button>
-        <div class="header__menu">
-          <a href="#">Числовий</a>
-          <a href="#">Ігровий</a>
-          <a href="#">Ознайомчий</a>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" class="menu__item">Числовий</a>
+          <a href="#" class="menu__item">Ігровий</a>
+          <a href="#" class="menu__item menu__item--radius">Ознайомчий</a>
         </div>
       </li>
       <li class="header__item">Наша команда</li>
