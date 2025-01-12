@@ -1,12 +1,16 @@
-document.addEventListener('click', function (event) {
-  const headerItem = document.querySelector('.header__item');
-  const isButton = event.target.closest('.header__btn');
+function myFunction() {
+  document.getElementById('myDropdown').classList.toggle('show');
+}
 
-  if (!headerItem.contains(event.target)) {
-    headerItem.classList.remove('open');
-    return;
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName('dropdown-content');
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
-  if (isButton) {
-    headerItem.classList.toggle('open');
-  }
-});
+};
