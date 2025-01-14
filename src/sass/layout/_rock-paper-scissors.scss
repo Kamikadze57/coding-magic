@@ -1,7 +1,6 @@
 .rock-paper-scissors__section {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .rock-paper-scissors__container {
   position: relative;
@@ -20,12 +19,31 @@
   gap: 38px;
   margin-bottom: 36px;
 }
-.rock-paper-scissors__item {
+.rock-paper-scissors__btn--svg {
   border-radius: 20px;
   padding: 10px;
-  width: 60px;
-  height: 60px;
   background-color: #000;
+  border: none;
+}
+.rock-paper-scissors__btn--svg:hover,
+.rock-paper-scissors__btn--svg:focus {
+  background-color: transparent;
+  border: 1px #000 solid;
+  cursor: pointer;
+}
+.rock-paper-scissors__svg {
+  fill: #fff;
+}
+.rock-paper-scissors__btn--svg:hover .rock-paper-scissors__svg,
+.rock-paper-scissors__btn--svg:focus .rock-paper-scissors__svg {
+  fill: #000;
+}
+.rock-paper-scissors__info {
+  font-family: 'Montserrat Alternates';
+  font-weight: 400;
+  font-size: 12px;
+  color: #039900;
+  text-align: center;
 }
 .rock-paper-scissors__btn {
   font-family: 'Montserrat Alternates';
@@ -37,8 +55,24 @@
   background: #000;
   border: none;
   cursor: pointer;
+  display: block;
+  margin: 36px auto 0;
+}
+.rock-paper-scissors__btn:hover,
+.rock-paper-scissors__btn:focus {
+  border: 1px #000 solid;
+  background-color: transparent;
+  color: #000;
+}
+.rock-paper-scissors__score--box {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 36px;
+  top: 92;
+  right: 220;
+}
+.rock-paper-scissors__score {
+  font-family: 'Montserrat Alternates';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 170%;
+  color: #000;
 }
