@@ -1,12 +1,12 @@
-document.addEventListener('click', function (event) {
-  const headerItem = document.querySelector('.header__item');
-  const isButton = event.target.closest('.header__btn');
+const dropbtn = document.querySelector('[dropbtn]');
+const dropdownContent = document.querySelector('[drop-content]');
 
-  if (!headerItem.contains(event.target)) {
-    headerItem.classList.remove('open');
-    return;
-  }
-  if (isButton) {
-    headerItem.classList.toggle('open');
+dropbtn.addEventListener('click', () => {
+  dropdownContent.style.display = 'block';
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.matches('[drop-content]') && !event.target.matches('[dropbtn]')) {
+    dropdownContent.style.display = 'none';
   }
 });
