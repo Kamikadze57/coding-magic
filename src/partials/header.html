@@ -1,32 +1,38 @@
 <header class="header">
-  <div class="container">
-    <ul class="header__list list">
-      <li class="header__item--icon">
-        <a class="logo__link link" href="#">
-          <svg class="header__logo-icon" width="92" height="38">
-            <use href="/src/images/icons.svg#logo"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="header__item dropdown">
-        <button onclick="myFunction()" class="header__btn dropbtn">
-          Інтерактив
-          <svg class="header__dropdown-icon" width="15" height="19">
-            <use href="/src/images/icons.svg#icon-arrow"></use>
-          </svg>
+  <div class="container header__container">
+    <a class="logo__link link" href="#">
+      <svg class="header__logo-icon" width="92" height="38">
+        <use href="/src/images/icons.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="header__nav">
+      <ul class="nav__list list">
+        <li class="nav__item" >
+          <a href="#" class="nav__link link dropdown__link" dropbtn>
+            Інтерактив
+            <svg class="header__dropdown-icon" width="15" height="19" dropbtn>
+              <use href="/src/images/icons.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <div class="dropdown-menu" drop-content>
+            <ul class="dropdown-menu__list list">
+              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Числовий</a></li>
+              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Ігровий</a></li>
+              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Ознайомчий</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link link">Наша команда</a></li>
+        <li class="nav__item"><a href="#" class="nav__link link">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="header__box">
+      <div class="theme__container">
+        <button class="theme__btn" type="button">
+          <img src="./images/header/sun.png" alt="sun">
         </button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#" class="menu__item">Числовий</a>
-          <a href="#" class="menu__item">Ігровий</a>
-          <a href="#" class="menu__item menu__item--radius">Ознайомчий</a>
-        </div>
-      </li>
-      <li class="header__item">Наша команда</li>
-      <li class="header__item">Контакти</li>
-      <li class="header__switcher">
-        <div class="header__block"></div>
-        <p class="header__text">Вітаємо, User!</p>
-      </li>
-    </ul>
+      </div>
+      <p class="welcome__text">Вітаємо, User!</p>
+    </div>
   </div>
 </header>

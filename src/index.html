@@ -7,12 +7,8 @@
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="./sass/index.scss"/> -->
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./sass/index.scss"/>
   </head>
   <body>
     <include src="./partials/header.html"></include>
@@ -30,24 +26,7 @@
       <include src="./partials/chose-scientist.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
-    <script>
-      function myFunction() {
-        document.getElementById('myDropdown').classList.toggle('show');
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName('dropdown-content');
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }; //хай буде поки так, бо наші файли js якісь довбануті і не працює нічо
-    </script>
+    <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/check-year.js"></script>
     <script type="module" src="./js/quess-number.js"></script>
     <script type="module" src="./js/football.js"></script>
