@@ -1,78 +1,69 @@
-.rock-paper-scissors__section {
-  display: flex;
-  justify-content: center;
-}
-.rock-paper-scissors__container {
+.rps__box {
   position: relative;
-}
-.rock-paper-scissors__title {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
-  font-size: 16px;
-  color: #000;
-  text-align: center;
   margin-bottom: 36px;
 }
-.rock-paper-scissors__list {
+.rps-choose__list {
+  margin: auto;
   display: flex;
   justify-content: center;
   gap: 38px;
-  margin-bottom: 36px;
 }
-.rock-paper-scissors__btn--svg {
+.rps-choose__btn {
   border-radius: 20px;
   padding: 10px;
   background-color: #000;
   border: none;
-}
-.rock-paper-scissors__btn--svg:hover,
-.rock-paper-scissors__btn--svg:focus {
-  background-color: transparent;
-  border: 1px #000 solid;
+  border: 1px solid #000;
+  transition: all 250ms ease-in-out;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+  &:hover .rps__svg,
+  &:focus .rps__svg {
+    fill: #000;
+  }
 }
-.rock-paper-scissors__svg {
+.rps__svg {
   fill: #fff;
+  transition: all 250ms ease-in-out;
 }
-.rock-paper-scissors__btn--svg:hover .rock-paper-scissors__svg,
-.rock-paper-scissors__btn--svg:focus .rock-paper-scissors__svg {
-  fill: #000;
+.rps-score__list {
+  position: absolute;
+  top: 0;
+  right: 220px;
 }
-.rock-paper-scissors__info {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
+.rps-score__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rps-score__text,
+.rps-score__title {
   font-size: 12px;
-  color: #039900;
+  font-weight: 400;
+}
+.rps__text {
+  font-size: 12px;
   text-align: center;
+  margin-bottom: 36px;
 }
-.rock-paper-scissors__btn {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
-  font-size: 12px;
+
+.rps-result__btn {
   color: #fff;
+  font-size: 12px;
   border-radius: 20px;
   padding: 10px 20px;
-  background: #000;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin: 36px auto 0;
-}
-.rock-paper-scissors__btn:hover,
-.rock-paper-scissors__btn:focus {
   border: 1px #000 solid;
-  background-color: transparent;
-  color: #000;
-}
-.rock-paper-scissors__score--box {
-  position: absolute;
-  top: 92;
-  right: 220;
-}
-.rock-paper-scissors__score {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 170%;
-  color: #000;
+  background-color: #000;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: #000;
+  }
 }
