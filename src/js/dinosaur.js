@@ -49,16 +49,16 @@ window.onload = function () {
   context = board.getContext('2d');
 
   dinoImg = new Image();
-  dinoImg.src = './img/dino.png';
+  dinoImg.src = './images/dinosaur/dino.png';
 
   cactus1Img = new Image();
-  cactus1Img.src = './img/cactus1.png';
+  cactus1Img.src = './images/dinosaur/cactus1.png';
 
   cactus2Img = new Image();
-  cactus2Img.src = './img/cactus2.png';
+  cactus2Img.src = './images/dinosaur/cactus2.png';
 
   cactus3Img = new Image();
-  cactus3Img.src = './img/cactus3.png';
+  cactus3Img.src = './images/dinosaur/cactus3.png';
 
   document.addEventListener('keydown', moveDino);
 };
@@ -101,7 +101,7 @@ function update() {
     if (detectCollision(dino, cactus)) {
       gameOver = true;
       gameStarted = false;
-      dinoImg.src = './img/dino-dead.png';
+      dinoImg.src = './images/dinosaur/dino-dead.png';
       dinoImg.onload = function () {
         context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
       };

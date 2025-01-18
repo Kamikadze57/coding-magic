@@ -1,39 +1,29 @@
-.dinosaur {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 298px;
-    margin: 0;
-    background-color: #f4f4f4;
+.dinosaur__box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-
-
-canvas {
-    background-color: aliceblue;
-    border-bottom: 1px solid black;
-    background-image: url('../../images/dinosaur/track.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    position: relative;
+.dinosaur__board {
+  background-image: url('../../images/dinosaur/track.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
-
 
 .dinosaur__btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background: gray;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    position: absolute;
-    top: 200px;
-    right: 700px;
-}
-
-.dinosaur__btn:hover {
-    background: #0056b3;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #7d7d7d;
+  background-color: #d7d7d7;
+  position: absolute;
+  top: 200px;
+  //   right: 700px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #7d7d7d;
+    color: #d7d7d7;
+  }
 }
