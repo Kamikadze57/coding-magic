@@ -15,10 +15,10 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url("./ball.jpg") no-repeat center center;
+    background: url("../ball.jpg") no-repeat center center;
     background-size: cover;
     border-radius: 50%;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
     }
     `,document.head.appendChild(t)}();
-//# sourceMappingURL=index.c78d25b9.js.map
+//# sourceMappingURL=index.c2ce9835.js.map
