@@ -27,6 +27,9 @@
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.02);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 250ms ease-in-out;
   cursor: pointer;
   &:hover {
