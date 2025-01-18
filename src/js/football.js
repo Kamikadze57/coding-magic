@@ -68,7 +68,7 @@ style.textContent = `
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url("./ball.jpg") no-repeat center center;
+    background: url("../ball.jpg") no-repeat center center;
     background-size: cover;
     border-radius: 50%;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
