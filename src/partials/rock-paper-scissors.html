@@ -1,27 +1,38 @@
-<section class="section rock-paper-scissors__section">
-  <div class="container rock-paper-scissors__container">
-    <h2 class="rock-paper-scissors__title">Камінь - ножиці - папір</h2>
-    <ul class="rock-paper-scissors__list list">
-      <li class="rock-paper-scissors__item">
-        <!-- <svg class="rock-paper-scissors__icon" width="40" height="40">
-          <use xlink:href="./images/icons.svg#icon-stone"></use>
-        </svg> -->
-      </li>
-      <li class="rock-paper-scissors__item">
-        <!-- <svg class="rock-paper-scissors__icon" width="40" height="40">
-          <use xlink:href="./images/icons.svg#icon-scissors"></use>
-        </svg> -->
-      </li>
-      <li class="rock-paper-scissors__item">
-        <!-- <svg class="rock-paper-scissors__icon" width="40" height="40">
-          <use xlink:href="./images/icon.svg#icon-scissors"></use>
-        </svg> -->
-      </li>
-    </ul>
-    <p class="rock-paper-scissors__prompt"></p>
-    <button type="button" class="rock-paper-scissors__btn">
-      Варіант комп’ютера
-    </button>
+<section class="rock-paper-scissors">
+  <div class="container">
+    <h3 class="title">Камінь - ножиці - папір</h3>
+    <div class="rps__box">
+      <ul class="rps-choose__list list">
+        <li class="rps-choose__item">
+          <button type="button" class="rps-choose__btn">
+            <svg class="rps__svg" width="40" height="40">
+              <use href="/src/images/icons.svg#icon-stone"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="rps-choose__item">
+          <button type="button" class="rps-choose__btn">
+            <svg class="rps__svg" width="40" height="40">
+              <use href="/src/images/icons.svg#icon-scissors"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="rps-choose__item">
+          <button type="button" class="rps-choose__btn">
+            <svg class="rps__svg" width="40" height="40">
+              <use href="/src/images/icons.svg#icon-paper"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="rps-score__list list">
+        <li class="rps-score__item"><h4 class="rps-score__title">Рахунок:</h4></li>
+        <li class="rps-score__item"><p class="rps-score__text">Комп'ютер - 0</p></li>
+        <li class="rps-score__item"><p class="rps-score__text">Ви - 0</p></li>
+      </ul>
+    </div>
+    <p class="rps__text">Зробіть свій вибір!</p>
+    <button class="rps-result__btn">Варіант комп'ютера</button>
     <div class="line"></div>
   </div>
 </section>

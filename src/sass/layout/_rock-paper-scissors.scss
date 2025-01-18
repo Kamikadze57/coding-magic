@@ -1,44 +1,69 @@
-.rock-paper-scissors__section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.rock-paper-scissors__container {
+.rps__box {
   position: relative;
-}
-.rock-paper-scissors__title {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
-  font-size: 16px;
-  color: #000;
-  text-align: center;
   margin-bottom: 36px;
 }
-.rock-paper-scissors__list {
+.rps-choose__list {
+  margin: auto;
   display: flex;
   justify-content: center;
   gap: 38px;
-  margin-bottom: 36px;
 }
-.rock-paper-scissors__item {
+.rps-choose__btn {
   border-radius: 20px;
   padding: 10px;
-  width: 60px;
-  height: 60px;
   background-color: #000;
+  border: none;
+  border: 1px solid #000;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+  &:hover .rps__svg,
+  &:focus .rps__svg {
+    fill: #000;
+  }
 }
-.rock-paper-scissors__btn {
-  font-family: 'Montserrat Alternates';
-  font-weight: 400;
+.rps__svg {
+  fill: #fff;
+  transition: all 250ms ease-in-out;
+}
+.rps-score__list {
+  position: absolute;
+  top: 0;
+  right: 220px;
+}
+.rps-score__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rps-score__text,
+.rps-score__title {
   font-size: 12px;
+  font-weight: 400;
+}
+.rps__text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.rps-result__btn {
   color: #fff;
+  font-size: 12px;
   border-radius: 20px;
   padding: 10px 20px;
-  background: #000;
-  border: none;
+  border: 1px #000 solid;
+  background-color: #000;
+  display: block;
+  margin: 0 auto;
   cursor: pointer;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 36px;
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: #000;
+  }
 }
