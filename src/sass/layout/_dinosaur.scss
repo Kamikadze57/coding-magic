@@ -1,29 +1,66 @@
-.dinosaur__box {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 .dinosaur__board {
+  position: relative;
+  width: 750px;
+  height: 250px;
+  background-color: beige;
+  overflow: hidden;
   background-image: url('../../images/dinosaur/track.png');
   background-repeat: no-repeat;
   background-position: bottom;
+  margin: 0 auto;
 }
 
 .dinosaur__btn {
-  font-size: 14px;
-  border: none;
-  border-radius: 20px;
   padding: 10px 20px;
-  color: #7d7d7d;
-  background-color: #d7d7d7;
-  position: absolute;
-  top: 200px;
-  //   right: 700px;
-  transition: all 250ms ease-in-out;
+  font-size: 18px;
+  color: white;
+  background: gray;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  &:hover,
-  &:focus {
-    background-color: #7d7d7d;
-    color: #d7d7d7;
-  }
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 1225px;
+  right: 675px;
+}
+
+.dinosaur__btn:hover {
+  background: #0056b3;
+}
+
+.dino {
+  position: absolute;
+  width: 88px;
+  height: 94px;
+  bottom: 0;
+  left: 50px;
+  background-image: url('../../images/dinosaur/dino.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cactus1 {
+  width: 34px;
+  height: 70px;
+  background-image: url('../../images/dinosaur/cactus1.png');
+}
+
+.cactus2 {
+  width: 69px;
+  height: 70px;
+  background-image: url('../../images/dinosaur/cactus2.png');
+}
+
+.cactus3 {
+  width: 102px;
+  height: 70px;
+  background-image: url('../../images/dinosaur/cactus3.png');
 }

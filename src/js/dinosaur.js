@@ -1,41 +1,20 @@
 let board;
+let dino;
 let boardWidth = 750;
 let boardHeight = 250;
-let context;
 
 let dinoWidth = 88;
 let dinoHeight = 94;
 let dinoX = 50;
-let dinoY = boardHeight - dinoHeight;
-let dinoImg;
+let dinoY = 0;
 
-let dino = {
-  x: dinoX,
-  y: dinoY,
-  width: dinoWidth,
-  height: dinoHeight,
-};
 let cactusArray = [];
-
-let cactus1Width = 34;
-let cactus2Width = 69;
-let cactus3Width = 102;
-
-let cactusHeight = 70;
-let cactusX = 700;
-let cactusY = boardHeight - cactusHeight;
-
-let cactus1Img;
-let cactus2Img;
-let cactus3Img;
-
 let velocityX = -8;
 let velocityY = 0;
 let gravity = 0.4;
 
 let gameOver = false;
 let score = 0;
-
 let gameStarted = false;
 
 window.onload = function () {
@@ -43,22 +22,12 @@ window.onload = function () {
   startBtn.addEventListener('click', startGame);
 
   board = document.getElementById('board');
-  board.height = boardHeight;
-  board.width = boardWidth;
 
-  context = board.getContext('2d');
-
-  dinoImg = new Image();
-  dinoImg.src = './images/dinosaur/dino.png';
-
-  cactus1Img = new Image();
-  cactus1Img.src = './images/dinosaur/cactus1.png';
-
-  cactus2Img = new Image();
-  cactus2Img.src = './images/dinosaur/cactus2.png';
-
-  cactus3Img = new Image();
-  cactus3Img.src = './images/dinosaur/cactus3.png';
+  dino = document.createElement('div');
+  dino.classList.add('dino');
+  dino.style.left = `${dinoX}px`;
+  dino.style.bottom = `${dinoY}px`;
+  board.appendChild(dino);
 
   document.addEventListener('keydown', moveDino);
 };
@@ -71,7 +40,15 @@ function startGame() {
   cactusArray = [];
   velocityY = 0;
 
-  requestAnimationFrame(update);
+  const scoreDisplay = document.createElement('div');
+  scoreDisplay.id = 'score';
+  scoreDisplay.style.position = 'absolute';
+  scoreDisplay.style.top = '10px';
+  scoreDisplay.style.left = '10px';
+  scoreDisplay.style.font = '20px courier';
+  board.appendChild(scoreDisplay);
+
+  update();
   setInterval(placeCactus, 1000);
 }
 
@@ -79,41 +56,34 @@ function update() {
   if (!gameStarted || gameOver) {
     return;
   }
-  requestAnimationFrame(update);
-
-  context.clearRect(0, 0, board.width, board.height);
 
   velocityY += gravity;
-  dino.y = Math.min(dino.y + velocityY, dinoY);
-  context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
+  dinoY = Math.min(dinoY + velocityY, 0);
+  dino.style.bottom = `${dinoY}px`;
 
-  for (let i = 0; i < cactusArray.length; i++) {
-    let cactus = cactusArray[i];
+  cactusArray.forEach((cactus, index) => {
     cactus.x += velocityX;
-    context.drawImage(
-      cactus.img,
-      cactus.x,
-      cactus.y,
-      cactus.width,
-      cactus.height
-    );
+    if (cactus.x + cactus.width < 0) {
+      cactusArray.splice(index, 1);
+      board.removeChild(cactus.element);
+    } else {
+      cactus.element.style.left = `${cactus.x}px`;
+    }
 
     if (detectCollision(dino, cactus)) {
       gameOver = true;
       gameStarted = false;
-      dinoImg.src = './images/dinosaur/dino-dead.png';
-      dinoImg.onload = function () {
-        context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
-      };
+      dino.style.backgroundImage = "url('./images/dinosaur/dino-dead.png')";
       alert('Гру завершено! Ваш рахунок: ' + score);
-      return;
     }
-  }
+  });
 
-  context.fillStyle = 'black';
-  context.font = '20px courier';
   score++;
-  context.fillText(score, 5, 20);
+  document.getElementById('score').innerText = score;
+
+  if (!gameOver) {
+    requestAnimationFrame(update);
+  }
 }
 
 function moveDino(e) {
@@ -121,7 +91,7 @@ function moveDino(e) {
     return;
   }
 
-  if ((e.code == 'Space' || e.code == 'ArrowUp') && dino.y == dinoY) {
+  if ((e.code === 'W' || e.code === 'ArrowUp') && dinoY === 0) {
     velocityY = -10;
   }
 }
@@ -131,40 +101,49 @@ function placeCactus() {
     return;
   }
 
-  let cactus = {
-    img: null,
-    x: cactusX,
-    y: cactusY,
-    width: null,
-    height: cactusHeight,
-  };
+  const cactus = document.createElement('div');
+  const type = Math.random();
 
-  let placeCactusChance = Math.random();
-
-  if (placeCactusChance > 0.9) {
-    cactus.img = cactus3Img;
-    cactus.width = cactus3Width;
-    cactusArray.push(cactus);
-  } else if (placeCactusChance > 0.7) {
-    cactus.img = cactus2Img;
-    cactus.width = cactus2Width;
-    cactusArray.push(cactus);
-  } else if (placeCactusChance > 0.5) {
-    cactus.img = cactus1Img;
-    cactus.width = cactus1Width;
-    cactusArray.push(cactus);
+  if (type > 0.9) {
+    cactus.classList.add('cactus', 'cactus3');
+    cactusArray.push({
+      element: cactus,
+      x: boardWidth,
+      y: 0,
+      width: 102,
+      height: 70,
+    });
+  } else if (type > 0.7) {
+    cactus.classList.add('cactus', 'cactus2');
+    cactusArray.push({
+      element: cactus,
+      x: boardWidth,
+      y: 0,
+      width: 69,
+      height: 70,
+    });
+  } else {
+    cactus.classList.add('cactus', 'cactus1');
+    cactusArray.push({
+      element: cactus,
+      x: boardWidth,
+      y: 0,
+      width: 34,
+      height: 70,
+    });
   }
 
-  if (cactusArray.length > 5) {
-    cactusArray.shift();
-  }
+  board.appendChild(cactus);
 }
 
-function detectCollision(a, b) {
-  return (
-    a.x < b.x + b.width &&
-    a.x + a.width > b.x &&
-    a.y < b.y + b.height &&
-    a.y + a.height > b.y
+function detectCollision(dino, cactus) {
+  const dinoRect = dino.getBoundingClientRect();
+  const cactusRect = cactus.element.getBoundingClientRect();
+
+  return !(
+    dinoRect.right < cactusRect.left ||
+    dinoRect.left > cactusRect.right ||
+    dinoRect.bottom < cactusRect.top ||
+    dinoRect.top > cactusRect.bottom
   );
 }
