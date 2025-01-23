@@ -1,0 +1,46 @@
+.time-calculator__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+}
+.time-calculator__input {
+  background-color: #d7d7d7;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  max-width: 150px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+.time-calculator__btn {
+  margin-left: -70px;
+  border: none;
+  background-color: #000;
+  height: 38px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #7e7e7e;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+.time-calculator__line {
+  width: 100px;
+  height: 1px;
+  border: 1px dashed #000;
+}

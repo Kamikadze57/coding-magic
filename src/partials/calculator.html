@@ -1,25 +1,25 @@
 <section class="calculator">
   <div class="container">
-    <h2 class="calculator__title title">Калькулятор</h2>
+    <h3 class="calculator__title title">Калькулятор</h3>
     <div class="calculator__container">
-      <input type="text" class="calculator__input" id="number" placeholder="Введіть число"/>
+      <input type="text" class="calculator__input" id="number" placeholder="Введіть число" data-calc-first-num/>
       <ul class="action__list list">
         <li class="action__item">
-          <button class="action__btn">+</button>
+          <button class="action__btn" data-add-btn>+</button>
         </li>
         <li class="action__item">
-          <button class="action__btn">*</button>
+          <button class="action__btn" data-increase-btn>*</button>
         </li>
         <li class="action__item">
-          <button class="action__btn">-</button>
+          <button class="action__btn" data-minus-btn>-</button>
         </li>
         <li class="action__item">
-          <button class="action__btn">/</button>
+          <button class="action__btn" data-divide-btn>/</button>
         </li>
       </ul>
-      <input type="text" class="calculator__input" id="number-sec" placeholder="Введіть число"/>
-      <button class="action__btn">=</button>
-      <p class="calculator__result">Результат</p>
+      <input type="text" class="calculator__input" id="number-sec" placeholder="Введіть число" data-calc-second-num/>
+      <button class="action__btn" data-calc-result-btn>=</button>
+      <p class="calculator__result" data-calc-result-text>Результат</p>
     </div>
     <div class="line"></div>
   </div>

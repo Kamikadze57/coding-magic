@@ -1,51 +1,22 @@
- .max-number__form {
-     margin-top: 36px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: 36px;
- }
+.max-number__box {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
 
- .max-number__inputs {
-     display: flex;
-     justify-content: center;
-     gap: 38px;
- }
-
- .input {
-     background-color: #D7D7D7;
-     padding: 10px 20px;
-     border-radius: 20px;
-     outline: none;
-     border: none;
- }
-
- .max-number__btn {
-     background-color: #000;
-     color: #fff;
-     font-size: 12px;
-     padding: 10px 20px;
-     border: none;
-     border-radius: 20px;
-     border: 1px solid black;
-     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2);
-     transition: all 250ms ease-in-out;
-     cursor: pointer;
-
-     &:hover {
-         background-color: #d7d7d7;
-         color: #000;
-     }
-
-     &:active {
-         transform: scale(0.9);
-     }
-
- }
-
- .max-number__result {
-     font-size: 12px;
-     font-weight: 400;
-     margin-top: 36px;
-     text-align: center;
- }
+.max-number__input {
+  background-color: #d7d7d7;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  max-width: 135px;
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+.max-number__result {
+  font-size: 12px;
+  margin-top: 36px;
+  text-align: center;
+}

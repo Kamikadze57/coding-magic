@@ -1,33 +1,23 @@
-export default class MaxNum {
-  constructor() {
-    this.form = document.querySelector('[data-maxNum-form]');
-    this.result = document.querySelector('[data-maxNum-result]');
-    this.inputs = document.querySelectorAll('[data-maxNum-input]');
+const maxNumInput = document.querySelectorAll('[data-Num-input]');
+const maxNumResult = document.querySelector('[data-maxNum-result]');
 
-    this.init();
-  }
-
-  init() {
-    if (!this.form || !this.result || this.inputs.length === 0) {
-      console.error('Form, result element, or input not found.');
-      return;
+function findMaxNumber() {
+  let maxNumber = Number.MIN_SAFE_INTEGER;
+  let hasInvalidInput = false;
+  maxNumInput.forEach(input => {
+    const number = Number(input.value);
+    if (!isNaN(number)) {
+      maxNumber = Math.max(maxNumber, number);
+    } else {
+      hasInvalidInput = true;
     }
-
-    this.form.addEventListener('submit', e => {
-      e.preventDefault();
-
-      const numbers = Array.from(this.inputs).map(input =>
-        parseFloat(input.value)
-      );
-
-      if (numbers.some(isNaN)) {
-        this.result.textContent =
-          'Будь ласка, введіть коректні числа у всі поля';
-        return;
-      }
-
-      const maxNum = Math.max(...numbers);
-      this.result.textContent = `Найбільше число, яке ви ввели - ${maxNum}`;
-    });
+  });
+  if (hasInvalidInput) {
+    maxNumResult.textContent = 'Будь ласка, введіть лише цифри';
+  } else {
+    maxNumResult.textContent = maxNumber;
   }
 }
+maxNumInput.forEach(input => {
+  input.addEventListener('input', findMaxNumber);
+});

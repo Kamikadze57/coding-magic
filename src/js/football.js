@@ -1,18 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const field = document.getElementById('field');
   const ball = document.getElementById('ball');
-  let ballSound;
-  const loadRandomSound = () => {
-    const sounds = [
-      'otskok-myacha.mp3',
-      'otskok-myacha.mp3',
-      'otskok-myacha.mp3',
-    ];
-    const randomIndex = Math.floor(Math.random() * sounds.length);
-    ballSound = new Audio(sounds[randomIndex]);
-  };
-
-  loadRandomSound();
 
   const centerBall = () => {
     const fieldRect = field.getBoundingClientRect();

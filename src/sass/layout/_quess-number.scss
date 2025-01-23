@@ -1,4 +1,4 @@
-.quess-number__div {
+.quess-number__box {
   display: flex;
   align-items: center;
   width: 576px;
@@ -21,7 +21,7 @@
 .quess-number__btn {
   margin-left: -35px;
   border: none;
-  height: 38.5px;
+  height: 38px;
   background-color: #000;
   width: 35px;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.02);
