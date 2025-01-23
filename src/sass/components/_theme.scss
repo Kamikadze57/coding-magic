@@ -1,0 +1,68 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #f1f1f1;
+  --icon-bg: #ffffff;
+}
+.dark-theme {
+  --bg-color: #222121;
+  --text-color: #ffffff;
+  --accent-color: #7a7a7a;
+  --icon-bg: #000;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.icon__theme--container {
+  width: 20px;
+  height: 20px;
+  background-color: var(--icon-bg);
+  border-radius: 50%;
+  border: 1px #000 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  border-radius: 11px;
+  transition: background-color 0.4s ease;
+  display: flex;
+  align-items: center;
+}
+.icon__theme {
+  width: 15px;
+  height: 15px;
+}
+.moon-icon {
+  fill: #fff;
+  opacity: 0;
+}
+input:checked + .slider .icon__theme--container {
+  transform: translateX(20px);
+}
+input:checked + .slider .sun-icon {
+  opacity: 0;
+}
+input:checked + .slider .moon-icon {
+  opacity: 1;
+}
