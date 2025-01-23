@@ -31,6 +31,9 @@
 <symbol id="close" viewBox="0 0 20 20">
 <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
 </symbol>
+<symbol id="icon-slider-btn" viewBox="0 0 16 32">
+<path stroke-width="0.3137" fill="none" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" d="M16 0.314l-15.686 15.686 15.686 15.686"></path>
+</symbol>
 </defs>
 </svg>
 
