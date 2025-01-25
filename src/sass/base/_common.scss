@@ -2,10 +2,10 @@
 
 body {
   font-family: Montserrat Alternates;
-  cursor: default;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  cursor: url('../../images/cursor.png'), default;
 }
 
 h1,
@@ -56,4 +56,7 @@ main {
   background-color: #eee;
   background-image: url('../../images/background.png');
   background-size: cover;
+}
+button, a {
+  cursor: url('../../images/pointer.png'), pointer;
 }

@@ -5,9 +5,7 @@ const addBtn = document.querySelector('[data-add-btn]');
 const increaseBtn = document.querySelector('[data-increase-btn]');
 const minusBtn = document.querySelector('[data-minus-btn]');
 const divideBtn = document.querySelector('[data-divide-btn]');
-const buttonDorivneneCalculator = document.querySelector(
-  '[data-calc-result-btn]'
-);
+const buttonDorivneneCalculator = document.querySelector('[data-calc-result-btn]');
 const calcResult = document.querySelector('[data-calc-result-text]');
 
 let sign;
@@ -26,7 +24,7 @@ buttonDorivneneCalculator.addEventListener('click', () => {
     calcResult.textContent =
       Number(firstNumberInput.value) / Number(secondNumberInput.value);
   } else {
-    calcResult.textContent = 'error';
+    calcResult.textContent = 'помилка';
   }
 });
 

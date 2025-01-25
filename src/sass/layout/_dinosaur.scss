@@ -1,66 +1,62 @@
-.dinosaur__board {
+.dinosaur {
   position: relative;
-  width: 750px;
-  height: 250px;
-  background-color: beige;
-  overflow: hidden;
-  background-image: url('../../images/dinosaur/track.png');
-  background-repeat: no-repeat;
-  background-position: bottom;
+}
+.dinosaur__canvas {
+  background-color: whitesmoke;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: block;
   margin: 0 auto;
 }
-
-.dinosaur__btn {
+.dinosaur-start__btn {
   padding: 10px 20px;
-  font-size: 18px;
-  color: white;
-  background: gray;
+  font-size: 14px;
+  color: #fff;
+  background-color: #7e7e7e;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: all 250ms ease-in-out;
   position: absolute;
-  top: 1225px;
-  right: 675px;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  // cursor: pointer;
+  &:hover,
+  &:focus {
+    color: #000;
+    background-color: #d7d7d7;
+  }
 }
-
-.dinosaur__btn:hover {
-  background: #0056b3;
-}
-
-.dino {
+.dinosaur__box {
+  opacity: 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   position: absolute;
-  width: 88px;
-  height: 94px;
-  bottom: 0;
-  left: 50px;
-  background-image: url('../../images/dinosaur/dino.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #d7d7d7;
+  transition: all 250ms ease-in-out;
+  pointer-events: none;
 }
-
-.cactus {
-  position: absolute;
-  bottom: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.cactus1 {
-  width: 34px;
-  height: 70px;
-  background-image: url('../../images/dinosaur/cactus1.png');
-}
-
-.cactus2 {
-  width: 69px;
-  height: 70px;
-  background-image: url('../../images/dinosaur/cactus2.png');
-}
-
-.cactus3 {
-  width: 102px;
-  height: 70px;
-  background-image: url('../../images/dinosaur/cactus3.png');
+.dinosaur-again__btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 250ms ease-in-out;
+  // cursor: pointer;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #000;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
 }
