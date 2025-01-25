@@ -7,7 +7,7 @@
     </a>
     <nav class="header__nav">
       <ul class="nav__list list">
-        <li class="nav__item" >
+        <li class="nav__item">
           <a href="#" class="nav__link link dropdown__link" dropbtn>
             Інтерактив
             <svg class="header__dropdown-icon" width="15" height="19" dropbtn>
@@ -16,23 +16,66 @@
           </a>
           <div class="dropdown-menu" drop-content>
             <ul class="dropdown-menu__list list">
-              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Числовий</a></li>
-              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Ігровий</a></li>
-              <li class="dropdown-menu__item"><a href="" class="dropdown-menu__link link">Ознайомчий</a></li>
+              <li class="dropdown-menu__item">
+                <a href="" class="dropdown-menu__link link">Числовий</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="" class="dropdown-menu__link link">Ігровий</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="" class="dropdown-menu__link link">Ознайомчий</a>
+              </li>
             </ul>
           </div>
         </li>
-        <li class="nav__item"><a href="#" class="nav__link link">Наша команда</a></li>
-        <li class="nav__item"><a href="#" class="nav__link link">Контакти</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link">Наша команда</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link">Контакти</a>
+        </li>
       </ul>
     </nav>
     <div class="header__box">
       <div class="theme__container">
         <button class="theme__btn" type="button">
-          <img src="./images/header/sun.png" alt="sun">
+          <img src="./images/header/sun.png" alt="sun" />
         </button>
       </div>
       <p class="welcome__text">Вітаємо, User!</p>
     </div>
   </div>
 </header>
+
+<div id="welcomePopup" class="popup">
+  <div class="popup-content">
+    <button class="close-button" onclick="closePopup()">&times;</button>
+    <p>Привіт!</p>
+    <p>Ви потрапили на сайт інтерактивних ігор та завдань.</p>
+    <p>Сподіваємось, що вам сподобається і ви отримаєте позитивні емоції!</p>
+    <p>Бажаємо Вам гарно провести час!</p>
+    <label for="username">Введіть своє ім’я:</label>
+    <input type="text" id="username" placeholder="Ваше ім’я..." />
+    <button onclick="saveName()">Зберегти</button>
+  </div>
+</div>
+
+<script>
+  window.onload = function () {
+    document.getElementById('welcomePopup').style.display = 'block';
+  };
+
+  function closePopup() {
+    document.getElementById('welcomePopup').style.display = 'none';
+  }
+
+  function saveName() {
+    let name = document.getElementById('username').value;
+    if (name) {
+      alert('Ім’я збережено: ' + name);
+      closePopup();
+    } else {
+      alert('Будь ласка, введіть ім’я.');
+    }
+  }
+</script>
