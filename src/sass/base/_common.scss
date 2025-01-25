@@ -4,7 +4,7 @@ body {
   font-family: Montserrat Alternates;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 250ms ease-in-out;;
   cursor: url('../../images/cursor.png'), default;
 }
 

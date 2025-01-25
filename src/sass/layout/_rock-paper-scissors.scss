@@ -15,7 +15,6 @@
   border: none;
   border: 1px solid var(--text-color);
   transition: all 250ms ease-in-out;
-  // cursor: pointer;
   &:hover,
   &:focus {
     background-color: transparent;
@@ -59,7 +58,6 @@
   background-color: #000;
   display: block;
   margin: 0 auto;
-  // cursor: pointer;
   transition: all 250ms ease-in-out;
   &:hover,
   &:focus {
