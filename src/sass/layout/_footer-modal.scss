@@ -39,11 +39,16 @@
   display: flex;
   border: none;
   background-color: transparent;
+  &:hover .footer-modal__svg,
+  &:focus .footer-modal__svg {
+    fill: #7a7a7a;
+  }
 }
-.footer-modal-img {
+.footer-modal__item {
   position: absolute;
-  width: 30px;
-  height: 30px;
+}
+.footer-modal__icon, .footer-modal__svg{
+  fill: var(--text-color);
 }
 .sword {
   left: 43px;
