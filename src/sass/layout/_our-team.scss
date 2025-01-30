@@ -49,7 +49,7 @@
   }
 }
 .slider__icon {
-  stroke: #000;
+  stroke: var(--text-color);
 }
 .slider__btn--right {
   transform: scaleX(-1);

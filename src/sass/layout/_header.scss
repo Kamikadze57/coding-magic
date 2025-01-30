@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
 }
+.header__logo--icon {
+  fill: var(--text-color);
+}
 .nav__list {
   display: flex;
   align-items: center;
@@ -46,6 +49,7 @@
   &:hover,
   &:focus {
     background-color: var(--accent-color);
+    cursor: url('../../images/pointer.png'), pointer;
   }
 }
 .dropdown-menu__link {
