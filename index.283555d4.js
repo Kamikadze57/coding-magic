@@ -1,2 +1,0 @@
-!function(){let e=document.querySelector("[data-inputNumber]"),t=document.querySelector("[data-btnNumber]"),o=document.querySelector("[data-textNumber]"),n=Math.floor(10*Math.random())+1;t.addEventListener("click",()=>{let t=parseInt(e.value);t===n?(o.textContent="Вітаємо! Ви вгадали!",o.style.color="green"):t<n?(o.textContent="Загадане число більше",o.style.color="blue"):(o.textContent="Загадане число менше",o.style.color="red")})}();
-//# sourceMappingURL=index.283555d4.js.map
