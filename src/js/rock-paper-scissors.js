@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   computerButton.addEventListener('click', () => {
+    if (typeof userChoice === 'undefined') {
+      resultText.textContent = 'Будь ласка, виберіть ваш варіант!';
+      resultText.style.color = 'red';
+      return;
+    }
     let result = getResult(userChoice, computerChoice);
     if (result === 'win') {
       userScore++;
@@ -34,11 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
       resultText.textContent = 'Нічия!';
       resultText.style.color = 'blue';
     }
-
     scoreItems[0].textContent = `Комп'ютер - ${computerScore}`;
     scoreItems[1].textContent = `Ви - ${userScore}`;
-
+    userChoice = undefined;
     computerChoice = getRandomChoice();
+    
   });
 
   function getResult(user, computer) {

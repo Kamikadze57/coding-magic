@@ -5,6 +5,12 @@ const textYear = document.querySelector('[data-textYear]');
 btnYear.addEventListener('click', () => {
   const year = parseInt(inputYear.value);
 
+  if (isNaN(year) || inputYear.value.trim() === '') {
+    textYear.textContent = 'Будь ласка, введіть рік!';
+    textYear.style.color = 'red';
+    return;
+  }
+
   const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 
   if (isLeapYear) {

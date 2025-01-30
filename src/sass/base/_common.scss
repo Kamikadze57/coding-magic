@@ -4,7 +4,7 @@ body {
   font-family: Montserrat Alternates;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: all 250ms ease-in-out;;
+  transition: all 250ms ease-in-out;
   cursor: url('../../images/cursor.png'), default;
 }
 
@@ -59,4 +59,13 @@ main {
 }
 button, a {
   cursor: url('../../images/pointer.png'), pointer;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #222121;
 }
