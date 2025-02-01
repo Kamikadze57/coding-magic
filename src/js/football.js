@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const field = document.getElementById('field');
-  const ball = document.getElementById('ball');
+  const field = document.querySelector('[data-field]');
+  const ball = document.querySelector('[data-ball]');
 
   const centerBall = () => {
     const fieldRect = field.getBoundingClientRect();
@@ -37,30 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
     ball.style.top = `${targetY - ballRadius}px`;
   });
 });
-
-const style = document.createElement('style');
-style.textContent = `
-    #field {
-    position: relative;
-    width: 720px;
-    height: 220px;
-    background: #228B22; 
-    border: 5px solid white;
-    border-radius: 20px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    }
-    
-    #ball {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url("../ball.jpg") no-repeat center center;
-    background-size: cover;
-    border-radius: 50%;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-    }
-    `;
-
-document.head.appendChild(style);

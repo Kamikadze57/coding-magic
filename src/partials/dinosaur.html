@@ -1,7 +1,16 @@
 <section class="dinosaur">
-    <div class="container">
-        <h3 class="title">Google динозавр</h3>
-        <div class="dinosaur__board" id="board"></div>
-        <button class="dinosaur__btn" id="startBtn">Почати гру</button>
+  <div class="container">
+    <h3 class="dinosaur__title title">Google динозавр</h3>
+    <canvas class="dinosaur__canvas" width="600px" height="200px" data-dinosaur-canvas></canvas>
+    <div class="dinosaur__box" data-dinosaur-box>
+      <p class="dinosaur-box__title">Гру завершено!</p>
+      <button class="dinosaur-again__btn" data-dinosaur-again>Спробувати ще</button>
     </div>
+    <button class="dinosaur-start__btn" data-dinosaur-start>Почати</button>
+    <img style="display: none" src="./images/dinosaur/dino.png" data-dino />
+    <img style="display: none" src="./images/dinosaur/cactus1.png" data-cactus1 />
+    <img style="display: none" src="./images/dinosaur/cactus2.png" data-cactus2 />
+    <img style="display: none" src="./images/dinosaur/cactus3.png" data-cactus3 />
+    <div class="line"></div>
+  </div>
 </section>

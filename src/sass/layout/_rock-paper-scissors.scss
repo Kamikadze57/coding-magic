@@ -3,7 +3,6 @@
   margin-bottom: 36px;
 }
 .rps-choose__list {
-  margin: auto;
   display: flex;
   justify-content: center;
   gap: 38px;
@@ -11,22 +10,21 @@
 .rps-choose__btn {
   border-radius: 20px;
   padding: 10px;
-  background-color: #000;
+  background-color: var(--text-color);
   border: none;
-  border: 1px solid #000;
+  border: 1px solid var(--text-color);
   transition: all 250ms ease-in-out;
-  cursor: pointer;
   &:hover,
   &:focus {
     background-color: transparent;
   }
   &:hover .rps__svg,
   &:focus .rps__svg {
-    fill: #000;
+    fill: var(--text-color);
   }
 }
 .rps__svg {
-  fill: #fff;
+  fill: var(--icon-bg);
   transition: all 250ms ease-in-out;
 }
 .rps-score__list {
@@ -49,7 +47,6 @@
   text-align: center;
   margin-bottom: 36px;
 }
-
 .rps-result__btn {
   color: #fff;
   font-size: 12px;
@@ -59,11 +56,11 @@
   background-color: #000;
   display: block;
   margin: 0 auto;
-  cursor: pointer;
   transition: all 250ms ease-in-out;
   &:hover,
   &:focus {
     background-color: transparent;
-    color: #000;
+    color: var(--text-color);
+    border-color: var(--text-color);
   }
 }

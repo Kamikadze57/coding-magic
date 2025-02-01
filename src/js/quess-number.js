@@ -7,6 +7,12 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 btnNumber.addEventListener('click', () => {
   const userGuess = parseInt(inputNumber.value);
 
+  if (isNaN(userGuess) || inputNumber.value.trim() === '') {
+    textNumber.textContent = 'Будь ласка, введіть число!';
+    textNumber.style.color = 'red';
+    return;
+  }
+
   if (userGuess === randomNumber) {
     textNumber.textContent = 'Вітаємо! Ви вгадали!';
     textNumber.style.color = 'green';

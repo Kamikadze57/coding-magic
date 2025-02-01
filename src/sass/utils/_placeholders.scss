@@ -1,9 +1,9 @@
 .line {
   width: 536px;
-  height: 1px;
-  background-color: #000;
+  transition: all 250ms ease-in-out;
   margin: 0 auto;
   margin-top: 36px;
+  border: 1px solid var(--text-color);
 }
 .title {
   font-size: 16px;

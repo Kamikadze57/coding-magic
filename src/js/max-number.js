@@ -1,4 +1,4 @@
-const maxNumInput = document.querySelectorAll('[data-Num-input]');
+const maxNumInput = document.querySelectorAll('[data-maxNum-input]');
 const maxNumResult = document.querySelector('[data-maxNum-result]');
 
 function findMaxNumber() {

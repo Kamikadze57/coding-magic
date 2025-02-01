@@ -21,9 +21,9 @@
 .quess-number__btn {
   margin-left: -35px;
   border: none;
-  height: 38px;
   background-color: #000;
-  width: 35px;
+  height: 38.5px;
+  width: 36px;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.02);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -31,7 +31,6 @@
   align-items: center;
   justify-content: center;
   transition: all 250ms ease-in-out;
-  cursor: pointer;
   &:hover {
     background-color: #7e7e7e;
   }
