@@ -1,0 +1,85 @@
+.header-modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--bg-color);
+  padding: 47px 92px;
+}
+.header-modal__close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  &:hover .header-modal__svg,
+  &:focus .header-modal__svg {
+    fill: #7a7a7a;
+  }
+}
+.header-modal__text,
+.header-modal-name__text {
+  text-align: center;
+  font-size: 12px;
+}
+.header-modal-name__text {
+  margin-top: 42px;
+}
+.header-modal__input {
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-color: #d7d7d7;
+  width: 170px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+.header-modal__btn {
+  color: #fff;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1px #000 solid;
+  background-color: #000;
+  margin: 0 auto;
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--text-color);
+  }
+}
+.header-modal__item {
+  position: absolute;
+}
+.header-modal__icon,
+.header-modal__svg {
+  fill: var(--text-color);
+}
+.header-sword {
+  left: 41px;
+  bottom: 132px;
+}
+.header-game-dev {
+  right: 41px;
+  bottom: 132px;
+}
+.header-puzzle {
+  left: 85px;
+  bottom: 56px;
+}
+.header-ttt {
+  right: 85px;
+  bottom: 56px;
+}
