@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="welcomePopup" class="popup">
+      <div class="popup-content">
+        <button class="close-button" onclick="closePopup()">&times;</button>
+        <p>Привіт!</p>
+        <p>Ви потрапили на сайт інтерактивних ігор та завдань.</p>
+        <p>
+          Сподіваємось, що вам сподобається і ви отримаєте позитивні емоції!
+        </p>
+        <p>Бажаємо Вам гарно провести час!</p>
+        <label for="username">Введіть своє ім’я:</label>
+        <input type="text" id="username" placeholder="Ваше ім’я..." />
+        <button onclick="saveName()">Зберегти</button>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        document.getElementById('welcomePopup').style.display = 'block';
+      };
+
+      function closePopup() {
+        document.getElementById('welcomePopup').style.display = 'none';
+      }
+
+      function saveName() {
+        let name = document.getElementById('username').value;
+        if (name) {
+          alert('Ім’я збережено: ' + name);
+          closePopup();
+        } else {
+          alert('Будь ласка, введіть ім’я.');
+        }
+      }
+    </script>
+  </body>
+</html>
