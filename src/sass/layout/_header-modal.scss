@@ -1,0 +1,65 @@
+$primary-color: #4a90e2;
+$background-color: rgba(0, 0, 0, 0.5);
+$text-color: #fff;
+$popup-width: 300px;
+$popup-padding: 20px;
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .popup-content {
+    background: $text-color;
+    color: #333;
+    padding: $popup-padding;
+    width: $popup-width;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+
+    p {
+      margin: 10px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: $text-color;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
